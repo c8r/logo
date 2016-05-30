@@ -1,0 +1,18 @@
+{
+  "name": "@compositor/logo",
+  "version": "1.0.0",
+  "description": "Logo for compositor.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run png & npm run favicon & npm run icon",
+    "png": "rm -f compositor.png && svg2png compositor.svg -w=96 -h=96",
+    "favicon": "rm -f favicon.png && svg2png compositor.svg -o=favicon.png -w=32 -h=32",
+    "icon": "rm -f apple-touch-icon.png && svg2png compositor.svg -o=apple-touch-icon.png -w=512 -h=512"
+  },
+  "keywords": [],
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "devDependencies": {
+    "svg2png": "^3.0.0"
+  }
+}
