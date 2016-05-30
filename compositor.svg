@@ -3,5 +3,5 @@
   viewBox='0 0 32 32'
   width='96'
   height='96'>
-  <path d='M8 0 V32 H24 V0 z' />
+  <path d='M8 4 V28 H24 V4 z' />
 </svg>
