@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<style>
+body {
+  font-family: -apple-system, sans-serif;
+  margin: 0;
+}
+.grad {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+  /*
+  animation-name: glimmer;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c2447a69043e39f174216c5440f0fb2d);
+  */
+}
+.l {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation-name: fade;
+  animation-timing-function: linear;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  /*
+  background-blend-mode: overlay;
+     */
+}
+.l1 {
+  background-image: linear-gradient(45deg, cyan, magenta);
+}
+.l2 {
+  animation-delay: 2s;
+  background-image: linear-gradient(45deg, yellow, cyan);
+}
+.l3 {
+  animation-delay: 4s;
+  background-image: linear-gradient(45deg, magenta, yellow);
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  33% { opacity: 1 }
+  66% { opacity: 0 }
+  100% { opacity: 0 }
+}
+
+@keyframes glimmer {
+  0%   { background-image: linear-gradient(45deg, cyan, magenta); }
+  33%  { background-image: linear-gradient(45deg, yellow, cyan); }
+  66%  { background-image: linear-gradient(45deg, magenta, yellow); }
+  100% { background-image: linear-gradient(45deg, cyan, magenta); }
+}
+</style>
+<div class='grad'>
+  <div class='l l1'></div>
+  <div class='l l2'></div>
+  <div class='l l3'></div>
+  <h1>Hello</h1>
+</div>

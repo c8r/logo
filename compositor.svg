@@ -3,5 +3,44 @@
   viewBox='0 0 32 32'
   width='96'
   height='96'>
-  <path d='M8 4 V28 H24 V4 z' />
+  <defs>
+    <style>
+      .sort {
+        fill: url(#gradient);
+      }
+      .stop1 {
+        animation-name: glimmer1;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      .stop2 {
+        animation-name: glimmer2;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes glimmer1 {
+        0% { stop-color: cyan; }
+        33% { stop-color: yellow; }
+        66% { stop-color: magenta; }
+        100% { stop-color: cyan; }
+      }
+      @keyframes glimmer2 {
+        0% { stop-color: magenta; }
+        33% { stop-color: cyan; }
+        66% { stop-color: yellow; }
+        100% { stop-color: magenta; }
+      }
+    </style>
+    <linearGradient id='gradient'
+      x1='0' x2='1' y1='0' y2='1'>
+      <stop offset='0%' class='stop1' stop-color='cyan' />
+      <stop offset='100%' class='stop2' stop-color='magenta' />
+    </linearGradient>
+  </defs>
+  <path class='sort' d='M8 4 V28 H24 V4 z' />
+  <!--
+  <path class='sort' d='M10.25 6 L4.25 16 L10.25 26.25 H22 L28 16 L22 6 z' />
+  -->
 </svg>
