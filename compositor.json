@@ -1,0 +1,73 @@
+{
+  "name": "c8r/logo",
+  "version": "0.1.3",
+  "libraries": {
+    "xv": "^1.0.27"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Future",
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#777",
+      "secondary": "#ccc",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    }
+  },
+  "content": [
+    {
+      "component": "nav/AbsoluteNav",
+      "links": [
+        {
+          "href": "https://github.com/c8r/logo",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/@compositor/logo",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header/BannerHeader",
+      "heading": "logo",
+      "subhead": "Logo for compositor.io",
+      "links": [
+        {
+          "text": "Tweet",
+          "href": "https://twitter.com/intent/tweet?text=logo%253A%2520null&url="
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "footer/BasicFooter",
+      "links": [
+        {
+          "href": "https://github.com/c8r/logo",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/c8r",
+          "text": "c8r"
+        }
+      ]
+    }
+  ]
+}
