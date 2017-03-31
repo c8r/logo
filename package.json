@@ -4,6 +4,7 @@
   "description": "Logo for compositor.io",
   "main": "index.js",
   "scripts": {
+    "dev": "repng Logo.js --dev",
     "start": "npm run png & npm run favicon & npm run icon",
     "png": "rm -f compositor.png && svg2png compositor.svg -w=96 -h=96",
     "favicon": "rm -f favicon.png && svg2png compositor.svg -o=favicon.png -w=32 -h=32",
@@ -13,6 +14,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
+    "repng": "^1.0.0-b7",
     "svg2png": "^3.0.0"
   }
 }
