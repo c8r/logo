@@ -3,44 +3,51 @@ const React = require('react')
 
 const size = 512
 
+// const dimensions = [ 16, 8 ]
+
 module.exports = ({
   size = 512,
-  color = 'white',
-  backgroundColor = 'black',
+  color = 'black',
+  backgroundColor = 'white',
   horizontal,
-  children
+  children,
+  _dimensions = [ 16, 8 ]
 }) => {
+  const H = horizontal ? 0 : 1
+  const w = _dimensions[H]
+  const h = _dimensions[1 - H]
+  const x = -w / 2
+  const y = -h / 2
+
   return (
-    <div style={sx.root}>
-      <svg
-        viewBox='-12 -12 24 24'
-        width={size}
-        height={size}>
-        <rect
-          x={-12}
-          y={-12}
-          width={24}
-          height={24}
-          fill={color}
-        />
-        <rect
-          x={-4}
-          y={-8}
-          height={16}
-          width={8}
-          fill={backgroundColor}
-        />
-        {children}
-      </svg>
-    </div>
+    <svg
+      viewBox='-12 -12 24 24'
+      style={sx.root}
+      width={size}
+      height={size}>
+      <rect
+        x={-12}
+        y={-12}
+        width={24}
+        height={24}
+        fill={backgroundColor}
+      />
+      <rect
+        x={x}
+        y={y}
+        width={w}
+        height={h}
+        fill={color}
+      />
+      {children}
+    </svg>
   )
 }
 
 const sx = {
   root: {
     display: 'block',
-    margin: 0,
-    // overflow: 'visible'
+    margin: 0
   }
 }
 

@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "repng src/Logo.js --dev",
+    "alt-dev": "repng src/LogoAlt.js --dev",
+    "build": "",
     "start": ""
   },
   "keywords": [],
