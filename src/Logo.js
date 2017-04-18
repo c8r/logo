@@ -9,6 +9,8 @@ module.exports = ({
   size = 256,
   color = 'black',
   backgroundColor = 'white',
+  // todo:
+  radius,
   horizontal,
   children,
   _dimensions = [ 16, 8 ]
