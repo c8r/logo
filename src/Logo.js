@@ -1,11 +1,14 @@
 
 const React = require('react')
-const Grid = require('./Grid')
 
 const size = 512
 
 module.exports = ({
-  grid = true
+  size = 512,
+  color = 'white',
+  backgroundColor = 'black',
+  horizontal,
+  children
 }) => {
   return (
     <div style={sx.root}>
@@ -18,30 +21,26 @@ module.exports = ({
           y={-12}
           width={24}
           height={24}
-          fill={colors.white}
+          fill={color}
         />
-        {grid && <Grid />}
         <rect
           x={-4}
           y={-8}
           height={16}
           width={8}
-          fill={colors.black}
+          fill={backgroundColor}
         />
+        {children}
       </svg>
     </div>
   )
 }
 
-const colors = {
-  black: '#000',
-  gray: 'rgba(0,0,0,.25)',
-  white: '#fff'
-}
-
 const sx = {
   root: {
-    overflow: 'visible'
+    display: 'block',
+    margin: 0,
+    // overflow: 'visible'
   }
 }
 
