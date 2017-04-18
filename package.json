@@ -4,7 +4,7 @@
   "description": "Logo for compositor.io",
   "main": "index.js",
   "scripts": {
-    "dev": "repng src/Logo.js --dev",
+    "dev": "repng src/Grid.js --dev",
     "alt-dev": "repng src/LogoAlt.js --dev",
     "build": "",
     "start": ""

@@ -1,12 +1,12 @@
 
 const React = require('react')
 
-const size = 512
+// const size = 512
 
 // const dimensions = [ 16, 8 ]
 
 module.exports = ({
-  size = 512,
+  size = 256,
   color = 'black',
   backgroundColor = 'white',
   horizontal,
