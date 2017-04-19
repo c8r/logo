@@ -4,7 +4,7 @@
   "description": "Logo for compositor.io",
   "main": "index.js",
   "scripts": {
-    "dev": "repng src/Grid.js --dev",
+    "dev": "repng src/Zero.js --dev",
     "alt-dev": "repng src/LogoAlt.js --dev",
     "build": "",
     "start": ""
@@ -13,7 +13,7 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
-    "repng": "^1.0.0-b7",
+    "repng": "^1.0.0-b8",
     "svg2png": "^3.0.0"
   }
 }
