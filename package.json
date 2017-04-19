@@ -4,9 +4,11 @@
   "description": "Logo for compositor.io",
   "main": "index.js",
   "scripts": {
-    "dev": "repng src/Zero.js --dev",
-    "alt-dev": "repng src/LogoAlt.js --dev",
-    "build": "",
+    "dev": "repng src/Logo.js --dev -p '{\"size\":512}'",
+    "build": "npm run logo && npm run zero && npm run breakpoint",
+    "logo": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
+    "zero": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024",
+    "breakpoint": "repng src/Breakpoint.js -o dist -f breakpoint -w 1024 -h 1024",
     "start": ""
   },
   "keywords": [],
@@ -15,5 +17,8 @@
   "devDependencies": {
     "repng": "^1.0.0-b8",
     "svg2png": "^3.0.0"
+  },
+  "dependencies": {
+    "chroma-js": "^1.3.3"
   }
 }

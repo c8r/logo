@@ -3,7 +3,7 @@ const React = require('react')
 const Logo = require('./Logo')
 
 module.exports = ({
-  size = 512
+  size = 1024
 }) => {
   return (
     <Logo
