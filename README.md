@@ -8,7 +8,7 @@ Because the clear space is included in the logo itself, no additional space need
 
 ## Ratios
 
-![](dist/logo-grid.png)
+<img src='dist/logo-grid.png' width='256' height='256' />
 
 The inner rectangle has a 2:1 ratio.
 The space to the left and right of the rectangle is equal to its width, and the top and bottom spacing is equal to half its width.
