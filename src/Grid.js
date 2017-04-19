@@ -3,7 +3,7 @@ const React = require('react')
 const Logo = require('./Logo')
 
 module.exports = ({
-  size = 512
+  size = 1024
 }) => {
   return (
     <svg
@@ -53,12 +53,11 @@ module.exports = ({
             L, 15, -8
           )} />
         </g>
-        <g fill={gray}
-          textAnchor='middle'>
-          <text y='-15'>x</text>
-          <text x={18}>2x</text>
-          <text x={18} y={-10}>½x</text>
-          <text x={15.5} y={12}>3x</text>
+        <g fill={gray}>
+          <text y='-15' textAnchor='middle'>x</text>
+          <text x={17}>2x</text>
+          <text x={17} y={-9.5}>0.5x</text>
+          <text x={14.5} y={12}>3x</text>
         </g>
       </g>
     </svg>

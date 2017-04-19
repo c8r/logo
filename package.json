@@ -1,20 +1,25 @@
 {
   "name": "@compositor/logo",
-  "version": "2.0.0-b.1",
-  "description": "Logo for compositor.io",
+  "version": "1.0.0",
+  "description": "Logo and app icons for Compositor",
   "main": "index.js",
   "scripts": {
     "dev": "repng src/Logo.js --dev -p '{\"size\":512}'",
-    "build": "npm run logo && npm run zero && npm run breakpoint",
-    "logo": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
-    "zero": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024",
-    "breakpoint": "repng src/Breakpoint.js -o dist -f breakpoint -w 1024 -h 1024",
-    "start": ""
+    "png": "npm run logo-png && npm run zero-png && npm run breakpoint-png",
+    "logo-png": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
+    "zero-png": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024",
+    "breakpoint-png": "repng src/Breakpoint.js -o dist -f breakpoint -w 1024 -h 1024",
+    "grid-png": "repng src/Grid.js -o dist -f logo-grid -w 1024 -h 1024",
+    "icns": "npm run zero-icns && npm run breakpoint-icns",
+    "zero-icns": "nicns --in dist/zero.png --out dist/zero.icns",
+    "breakpoint-icns": "nicns --in dist/breakpoint.png --out dist/breakpoint.icns",
+    "prepublish": "npm run png && npm run icns"
   },
   "keywords": [],
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
+    "node-icns": "0.0.4",
     "repng": "^1.0.0-b8",
     "svg2png": "^3.0.0"
   },

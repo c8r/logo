@@ -1,10 +1,14 @@
 
 # Logo
 
+![](dist/compositor.png =256x256)
+
 The Compositor logo, also known as the *sort* or the *block* is composed of a vertical rectangle within a clear space square.
 Because the clear space is included in the logo itself, no additional space needs to be added around the logo in use.
 
 ## Ratios
+
+![](dist/logo-grid.png)
 
 The inner rectangle has a 2:1 ratio.
 The space to the left and right of the rectangle is equal to its width, and the top and bottom spacing is equal to half its width.
@@ -22,6 +26,9 @@ Other colors can be introduced when needed.
 
 ## Product Icons
 
+![](dist/zero.png =128x128)
+![](dist/breakpoint.png =128x128)
+
 Product icons can be based on the logo's dimensions in a horizontal format.
 In order to support a family of related products, the icons should follow a similar layout,
 but can also branch out into product-specific brand colors to help differentiate themselves.
@@ -33,15 +40,26 @@ Repng can be used to export the icons into PNG format.
 React DOM can be used to render SVGs.
 Because the logo is built with React, the product icons can literally be composed with the Logo component.
 
-```
+```js
 <Logo
->
-...x0 icon example
+  color='white'
+  backgroundColor='black'
+  size={size}
+  radius={1}
+  horizontal>
+    <g fill='none'
+      stroke='black'
+      strokeWidth={strokeWidth}>
+      <path d={paths.x} />
+      <path d={paths.o} />
+    </g>
 </Logo>
 ```
 
+## Development
 
-
-
-
+```sh
+npm i
+npm run dev
+```
 
