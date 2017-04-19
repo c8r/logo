@@ -1,7 +1,7 @@
 
 # Logo
 
-![](dist/compositor.png =256x256)
+<img src='dist/compositor.png' width='256' height='256' />
 
 The Compositor logo, also known as the *sort* or the *block* is composed of a vertical rectangle within a clear space square.
 Because the clear space is included in the logo itself, no additional space needs to be added around the logo in use.
@@ -26,8 +26,8 @@ Other colors can be introduced when needed.
 
 ## Product Icons
 
-![](dist/zero.png =128x128)
-![](dist/breakpoint.png =128x128)
+<img src='dist/zero.png' width='128' height='128' />
+<img src='dist/breakpoint.png' width='128' height='128' />
 
 Product icons can be based on the logo's dimensions in a horizontal format.
 In order to support a family of related products, the icons should follow a similar layout,
