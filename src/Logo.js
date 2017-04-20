@@ -5,7 +5,6 @@ module.exports = ({
   size = 1024,
   color = 'black',
   backgroundColor = 'white',
-  // todo:
   radius,
   horizontal,
   children,
@@ -16,6 +15,8 @@ module.exports = ({
   const h = _dimensions[1 - H]
   const x = -w / 2
   const y = -h / 2
+
+  console.log(size)
 
   return (
     <svg
