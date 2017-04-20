@@ -1,18 +1,26 @@
 {
   "name": "@compositor/logo",
   "version": "1.0.0",
-  "description": "Logo for compositor.io",
-  "main": "index.js",
+  "description": "Logo and app icons for Compositor",
+  "main": "src/Logo.js",
   "scripts": {
-    "start": "npm run png & npm run favicon & npm run icon",
-    "png": "rm -f compositor.png && svg2png compositor.svg -w=96 -h=96",
-    "favicon": "rm -f favicon.png && svg2png compositor.svg -o=favicon.png -w=32 -h=32",
-    "icon": "rm -f apple-touch-icon.png && svg2png compositor.svg -o=apple-touch-icon.png -w=512 -h=512"
+    "dev": "repng src/Logo.js --dev",
+    "png": "npm run logo-png && npm run zero-png && npm run breakpoint-png && npm run grid-png",
+    "logo-png": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
+    "zero-png": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024",
+    "breakpoint-png": "repng src/Breakpoint.js -o dist -f breakpoint -w 1024 -h 1024",
+    "grid-png": "repng src/Grid.js -o dist -f logo-grid -w 1024 -h 1024",
+    "icns": "npm run zero-icns && npm run breakpoint-icns",
+    "zero-icns": "nicns --in dist/zero.png --out dist/zero.icns",
+    "breakpoint-icns": "nicns --in dist/breakpoint.png --out dist/breakpoint.icns",
+    "favicon": "sharp -i dist/compositor.png -o ./ resize 32 32 && mv compositor.png dist/favicon.png",
+    "prepublish": "npm run png && npm run icns && npm run favicon"
   },
-  "keywords": [],
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
-    "svg2png": "^3.0.0"
+    "node-icns": "0.0.4",
+    "repng": "^1.0.0",
+    "sharp-cli": "^1.3.0"
   }
 }
