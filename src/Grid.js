@@ -72,7 +72,7 @@ const sx = {
   root: {
     display: 'block',
     margin: 0,
-    fontFamily: 'monospace',
+    fontFamily: '"SF UI Display"',
     fontSize: 1.5
   }
 }
