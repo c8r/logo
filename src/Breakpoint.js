@@ -4,8 +4,8 @@ const chroma = require('chroma-js')
 const Logo = require('./Logo')
 
 const blue = '#00badb'
-const bg = blue
-const color = chroma(blue).darken(3.5).desaturate(1/2)
+const color = blue
+const bg = chroma(blue).darken(3.5).desaturate(1/2)
 
 module.exports = ({
   size = 1024
