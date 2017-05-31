@@ -16,8 +16,6 @@ module.exports = ({
   const x = -w / 2
   const y = -h / 2
 
-  console.log(size)
-
   return (
     <svg
       viewBox='-12 -12 24 24'
