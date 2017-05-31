@@ -1,9 +1,8 @@
-
 const React = require('react')
 const Logo = require('./Logo')
 
 module.exports = ({
-  size = 1024
+  size = 896
 }) => {
   return (
     <Logo
@@ -16,4 +15,3 @@ module.exports = ({
     </Logo>
   )
 }
-
