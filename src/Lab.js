@@ -51,6 +51,6 @@ const strokeWidth = 1/4
 const base = palette.cyan
 const colors = {
   a: base[4],
-  b: palette.gray[9],
-  c: base[7]
+  b: '#111',
+  c: '#111'
 }
