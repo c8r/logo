@@ -1,6 +1,6 @@
 {
   "name": "@compositor/logo",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Logo and app icons for Compositor",
   "main": "dist/index.js",
   "scripts": {
