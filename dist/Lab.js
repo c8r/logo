@@ -1,10 +1,7 @@
 'use strict';
 
 var React = require('react');
-var palx = require('palx');
 var Logo = require('./Logo');
-
-var palette = palx('#07c');
 
 module.exports = function (_ref) {
   var _ref$size = _ref.size,
@@ -24,24 +21,18 @@ module.exports = function (_ref) {
         stroke: colors.c,
         strokeWidth: strokeWidth,
         style: {
-          opacity: 3 / 4,
+          opacity: 1, // 3/4,
           mixBlendMode: 'multiply'
         } },
       React.createElement('ellipse', {
+        transform: 'rotate(-45)',
         cx: 0,
         cy: 0,
         rx: w,
         ry: h
       }),
       React.createElement('ellipse', {
-        transform: 'rotate(-60)',
-        cx: 0,
-        cy: 0,
-        rx: w,
-        ry: h
-      }),
-      React.createElement('ellipse', {
-        transform: 'rotate(60)',
+        transform: 'rotate(45)',
         cx: 0,
         cy: 0,
         rx: w,
@@ -51,12 +42,11 @@ module.exports = function (_ref) {
   );
 };
 
-var w = 1.25;
+var w = 1.5;
 var h = 3;
 var strokeWidth = 1 / 4;
-var base = palette.cyan;
 var colors = {
-  a: base[4],
-  b: '#111',
-  c: '#111'
+  a: '#fff',
+  b: '#000',
+  c: '#000'
 };
