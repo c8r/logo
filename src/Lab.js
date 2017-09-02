@@ -1,8 +1,5 @@
 const React = require('react')
-const palx = require('palx')
 const Logo = require('./Logo')
-
-const palette = palx('#07c')
 
 module.exports = ({
   size = 896
@@ -18,24 +15,18 @@ module.exports = ({
       stroke={colors.c}
       strokeWidth={strokeWidth}
       style={{
-        opacity: 3/4,
+        opacity: 1, // 3/4,
         mixBlendMode: 'multiply'
       }}>
       <ellipse
+        transform='rotate(-45)'
         cx={0}
         cy={0}
         rx={w}
         ry={h}
       />
       <ellipse
-        transform='rotate(-60)'
-        cx={0}
-        cy={0}
-        rx={w}
-        ry={h}
-      />
-      <ellipse
-        transform='rotate(60)'
+        transform='rotate(45)'
         cx={0}
         cy={0}
         rx={w}
@@ -45,12 +36,11 @@ module.exports = ({
   </Logo>
 )
 
-const w = 1.25
+const w = 1.5
 const h = 3
 const strokeWidth = 1/4
-const base = palette.cyan
 const colors = {
-  a: base[4],
-  b: '#111',
-  c: '#111'
+  a: '#fff',
+  b: '#000',
+  c: '#000'
 }
