@@ -2,6 +2,7 @@
 
 var React = require('react');
 var Logo = require('./Logo');
+var Atom = require('./Atom');
 
 module.exports = function (_ref) {
   var _ref$size = _ref.size,
@@ -16,27 +17,11 @@ module.exports = function (_ref) {
       radius: 1 },
     React.createElement(
       'g',
-      {
-        fill: 'none',
-        stroke: colors.c,
-        strokeWidth: strokeWidth,
-        style: {
-          opacity: 1, // 3/4,
-          mixBlendMode: 'multiply'
-        } },
-      React.createElement('ellipse', {
-        transform: 'rotate(-45)',
-        cx: 0,
-        cy: 0,
-        rx: w,
-        ry: h
-      }),
-      React.createElement('ellipse', {
-        transform: 'rotate(45)',
-        cx: 0,
-        cy: 0,
-        rx: w,
-        ry: h
+      { transform: 'translate(-4 -4)' },
+      React.createElement(Atom, {
+        size: 8,
+        color: colors.c,
+        'static': true
       })
     )
   );
@@ -47,6 +32,7 @@ var h = 3;
 var strokeWidth = 1 / 4;
 var colors = {
   a: '#fff',
-  b: '#000',
+  _b: '#000',
+  b: 'rgba(0, 0, 0, .875)',
   c: '#000'
 };

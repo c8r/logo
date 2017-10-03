@@ -66,17 +66,17 @@ const Atom = props => {
       <g transform='rotate(5 0 0)'>
         <circle
           {...electronProps}
-          style={{
-            ...sx.electronA,
-            ...(props.static ? sx.staticA : {})
-          }}
+          style={Object.assign({},
+            sx.electronA,
+            props.static ? sx.staticA : {}
+          )}
         />
         <circle
           {...electronProps}
-          style={{
-            ...sx.electronB,
-            ...(props.static ? sx.staticB : {})
-          }}
+          style={Object.assign({},
+            sx.electronB,
+            props.static ? sx.staticB : {}
+          )}
         />
       </g>
     </svg>
