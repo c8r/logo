@@ -1,5 +1,6 @@
 const React = require('react')
 const Logo = require('./Logo')
+const Atom = require('./Atom')
 
 module.exports = ({
   size = 896
@@ -10,27 +11,11 @@ module.exports = ({
     size={size}
     horizontal
     radius={1}>
-    <g
-      fill='none'
-      stroke={colors.c}
-      strokeWidth={strokeWidth}
-      style={{
-        opacity: 1, // 3/4,
-        mixBlendMode: 'multiply'
-      }}>
-      <ellipse
-        transform='rotate(-45)'
-        cx={0}
-        cy={0}
-        rx={w}
-        ry={h}
-      />
-      <ellipse
-        transform='rotate(45)'
-        cx={0}
-        cy={0}
-        rx={w}
-        ry={h}
+    <g transform='translate(-4 -4)'>
+      <Atom
+        size={8}
+        color={colors.c}
+        static
       />
     </g>
   </Logo>
@@ -41,6 +26,7 @@ const h = 3
 const strokeWidth = 1/4
 const colors = {
   a: '#fff',
-  b: '#000',
-  c: '#000'
+  _b: '#000',
+  b: 'rgba(0, 0, 0, .875)',
+  c: '#000',
 }
