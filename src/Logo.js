@@ -18,6 +18,7 @@ module.exports = ({
 
   return (
     <svg
+      xmlns='http://www.w3.org/2000/svg'
       viewBox='-12 -12 24 24'
       style={sx.root}
       width={size}
