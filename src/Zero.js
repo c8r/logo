@@ -14,14 +14,13 @@ module.exports = ({
         <g fill='none'
           stroke='black'
           strokeWidth={strokeWidth}>
-          <path d={paths.x} />
           <path d={paths.o} />
         </g>
     </Logo>
   )
 }
 
-const strokeWidth = 1/2
+const strokeWidth = 0.75 // 1/2
 const M = 'M'
 const L = 'L'
 const A = 'A'
@@ -34,12 +33,12 @@ const paths = {
     L, -4.8, 1.8
   ].join(' '),
   o: [
-    M, 3, -2,
-    A, 2, 2, 0, 0, 0, 3, 2,
-    A, 2, 2, 0, 0, 0, 3, -2,
+    M, 0, -3,
+    A, 3, 3, 0, 0, 0, 0, 3,
+    A, 3, 3, 0, 0, 0, 0, -3,
 
-    M, 4.5, -1.5,
-    L, 1.5, 1.5,
+    M, 3, -3,
+    L, -3, 3,
 
   ].join(' ')
 }
