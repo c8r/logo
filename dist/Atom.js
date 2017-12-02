@@ -37,7 +37,14 @@ var sx = {
 
 var keyframes = '\n/* <![CDATA[ */\n@keyframes spinA {\n  50% { transform: rotate3d(0, 1, 1, 180deg) }\n  100% { transform: rotate3d(0, 1, 1, 360deg) }\n}\n@keyframes spinB {\n  50% { transform: rotate3d(1, 0, 1, 180deg) }\n  100% { transform: rotate3d(1, 0, 1, 360deg) }\n}\n/* ]]> */\n';
 
-var Atom = function Atom(props) {
+var Atom = function Atom(_ref) {
+  var _ref$size = _ref.size,
+      size = _ref$size === undefined ? 256 : _ref$size,
+      _ref$color = _ref.color,
+      color = _ref$color === undefined ? 'currentcolor' : _ref$color,
+      _ref$animated = _ref.animated,
+      animated = _ref$animated === undefined ? false : _ref$animated;
+
   var electronProps = {
     cx: 0,
     cy: 0,
@@ -45,26 +52,25 @@ var Atom = function Atom(props) {
     strokeWidth: 4,
     vectorEffect: 'non-scaling-stroke'
   };
-  var size = props.size || 256;
 
   return React.createElement(
     'svg',
     {
       viewBox: '-12 -12 24 24',
-      size: props.size,
+      size: size,
       width: size,
       height: size,
-      stroke: props.color || 'currentcolor',
+      stroke: color,
       style: sx.svg },
     React.createElement('style', { dangerouslySetInnerHTML: { __html: keyframes } }),
     React.createElement(
       'g',
       { transform: 'rotate(5 0 0)' },
       React.createElement('circle', _extends({}, electronProps, {
-        style: Object.assign({}, sx.electronA, props.static ? sx.staticA : {})
+        style: Object.assign({}, sx.electronA, animated ? {} : sx.staticA)
       })),
       React.createElement('circle', _extends({}, electronProps, {
-        style: Object.assign({}, sx.electronB, props.static ? sx.staticB : {})
+        style: Object.assign({}, sx.electronB, animated ? {} : sx.staticB)
       }))
     )
   );

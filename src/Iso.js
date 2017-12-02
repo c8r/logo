@@ -2,7 +2,8 @@ const React = require('react')
 const Logo = require('./Logo')
 
 module.exports = ({
-  size = 896
+  size = 896,
+  strokeWidth = 0.5
 }) => (
   <Logo
     color={colors.a}
@@ -13,7 +14,7 @@ module.exports = ({
     <path
       fill='none'
       stroke='black'
-      strokeWidth={1}
+      strokeWidth={strokeWidth}
       d={`
         M0 -3 V${y}
         M0 ${y} L${[-c, c]}
@@ -22,10 +23,9 @@ module.exports = ({
     />
   </Logo>
 )
-// <g transform='translate(-4 -4)'></g>
 
 const y = 0
-const c = 2.2
+const c = 2.1
 const colors = {
   a: '#fff',
   b: '#000'

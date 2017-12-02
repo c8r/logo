@@ -5,7 +5,9 @@ var Logo = require('./Logo');
 
 module.exports = function (_ref) {
   var _ref$size = _ref.size,
-      size = _ref$size === undefined ? 896 : _ref$size;
+      size = _ref$size === undefined ? 896 : _ref$size,
+      _ref$strokeWidth = _ref.strokeWidth,
+      strokeWidth = _ref$strokeWidth === undefined ? 0.5 : _ref$strokeWidth;
   return React.createElement(
     Logo,
     {
@@ -17,15 +19,14 @@ module.exports = function (_ref) {
     React.createElement('path', {
       fill: 'none',
       stroke: 'black',
-      strokeWidth: 1,
+      strokeWidth: strokeWidth,
       d: '\n        M0 -3 V' + y + '\n        M0 ' + y + ' L' + [-c, c] + '\n        M0 ' + y + ' L' + [c, c] + '\n      '
     })
   );
 };
-// <g transform='translate(-4 -4)'></g>
 
 var y = 0;
-var c = 2.2;
+var c = 2.1;
 var colors = {
   a: '#fff',
   b: '#000'

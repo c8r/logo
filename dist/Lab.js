@@ -6,7 +6,9 @@ var Atom = require('./Atom');
 
 module.exports = function (_ref) {
   var _ref$size = _ref.size,
-      size = _ref$size === undefined ? 896 : _ref$size;
+      size = _ref$size === undefined ? 896 : _ref$size,
+      _ref$strokeWidth = _ref.strokeWidth,
+      strokeWidth = _ref$strokeWidth === undefined ? 0.5 : _ref$strokeWidth;
   return React.createElement(
     Logo,
     {
@@ -17,22 +19,40 @@ module.exports = function (_ref) {
       radius: 1 },
     React.createElement(
       'g',
-      { transform: 'translate(-4 -4)' },
-      React.createElement(Atom, {
-        size: 8,
-        color: colors.c,
-        'static': true
+      { transform: 'rotate(45)' },
+      React.createElement('ellipse', {
+        cx: 0,
+        cy: 0,
+        rx: 1.75,
+        ry: 3.5,
+        fill: 'none',
+        stroke: 'currentcolor',
+        strokeWidth: strokeWidth
+      }),
+      React.createElement('ellipse', {
+        cx: 0,
+        cy: 0,
+        rx: 3.5,
+        ry: 1.75,
+        fill: 'none',
+        stroke: 'currentcolor',
+        strokeWidth: strokeWidth
       })
     )
   );
 };
 
-var w = 1.5;
-var h = 3;
-var strokeWidth = 1 / 4;
+/*
+  <g transform='translate(-4 -4)'>
+    <Atom
+      size={8}
+      color={colors.b}
+      static
+    />
+  </g>
+  */
+
 var colors = {
   a: '#fff',
-  _b: '#000',
-  b: 'rgba(0, 0, 0, .875)',
-  c: '#000'
+  b: '#000'
 };

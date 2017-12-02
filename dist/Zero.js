@@ -5,7 +5,9 @@ var Logo = require('./Logo');
 
 module.exports = function (_ref) {
   var _ref$size = _ref.size,
-      size = _ref$size === undefined ? 896 : _ref$size;
+      size = _ref$size === undefined ? 896 : _ref$size,
+      _ref$strokeWidth = _ref.strokeWidth,
+      strokeWidth = _ref$strokeWidth === undefined ? 0.5 : _ref$strokeWidth;
 
   return React.createElement(
     Logo,
@@ -25,7 +27,6 @@ module.exports = function (_ref) {
   );
 };
 
-var strokeWidth = 0.75; // 1/2
 var M = 'M';
 var L = 'L';
 var A = 'A';

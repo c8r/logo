@@ -4,7 +4,9 @@
   "description": "Logo and app icons for Compositor",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "repng src/Iso.js --dev -c src/style.css",
+    "dev:iso": "repng src/Iso.js --dev -c src/style.css -p 9000",
+    "dev:zero": "repng src/Zero.js --dev -c src/style.css -p 9001",
+    "dev:lab": "repng src/Lab.js --dev -c src/style.css -p 9002",
     "png": "npm run logo-png && npm run zero-png && npm run lens-png && npm run grid-png && npm run lab-png && npm run iso-png",
     "logo-png": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
     "zero-png": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024 -c src/style.css",
