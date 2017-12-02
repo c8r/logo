@@ -35,16 +35,6 @@ module.exports = ({
   </Logo>
 )
 
-  /*
-    <g transform='translate(-4 -4)'>
-      <Atom
-        size={8}
-        color={colors.b}
-        static
-      />
-    </g>
-    */
-
 const colors = {
   a: '#fff',
   b: '#000'
