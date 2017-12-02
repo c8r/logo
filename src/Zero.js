@@ -2,7 +2,8 @@ const React = require('react')
 const Logo = require('./Logo')
 
 module.exports = ({
-  size = 896
+  size = 896,
+  strokeWidth = 0.5
 }) => {
   return (
     <Logo
@@ -20,7 +21,6 @@ module.exports = ({
   )
 }
 
-const strokeWidth = 0.75 // 1/2
 const M = 'M'
 const L = 'L'
 const A = 'A'

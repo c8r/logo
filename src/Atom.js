@@ -44,7 +44,11 @@ const keyframes = `
 /* ]]> */
 `
 
-const Atom = props => {
+const Atom = ({
+  size = 256,
+  color = 'currentcolor',
+  animated = false
+}) => {
   const electronProps = {
     cx: 0,
     cy: 0,
@@ -52,15 +56,14 @@ const Atom = props => {
     strokeWidth: 4,
     vectorEffect: 'non-scaling-stroke'
   }
-  const size = props.size || 256
 
   return (
     <svg
       viewBox='-12 -12 24 24'
-      size={props.size}
+      size={size}
       width={size}
       height={size}
-      stroke={props.color || 'currentcolor'}
+      stroke={color}
       style={sx.svg}>
       <style dangerouslySetInnerHTML={{ __html: keyframes }} />
       <g transform='rotate(5 0 0)'>
@@ -68,14 +71,14 @@ const Atom = props => {
           {...electronProps}
           style={Object.assign({},
             sx.electronA,
-            props.static ? sx.staticA : {}
+            animated ? {} : sx.staticA
           )}
         />
         <circle
           {...electronProps}
           style={Object.assign({},
             sx.electronB,
-            props.static ? sx.staticB : {}
+            animated ? {} : sx.staticB
           )}
         />
       </g>

@@ -6,4 +6,4 @@ module.exports.Lens = require('./Lens');
 module.exports.Breakpoint = require('./Lens');
 module.exports.Lab = require('./Lab');
 module.exports.Atom = require('./Atom');
-module.exports.Lab = require('./Iso');
+module.exports.Iso = require('./Iso');
