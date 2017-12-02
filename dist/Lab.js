@@ -42,16 +42,6 @@ module.exports = function (_ref) {
   );
 };
 
-/*
-  <g transform='translate(-4 -4)'>
-    <Atom
-      size={8}
-      color={colors.b}
-      static
-    />
-  </g>
-  */
-
 var colors = {
   a: '#fff',
   b: '#000'
