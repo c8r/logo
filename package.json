@@ -19,9 +19,14 @@
     "lens-icns": "nicns --in dist/lens.png --out dist/lens.icns",
     "lab-icns": "nicns --in dist/lab.png --out dist/lab.icns",
     "iso-icns": "nicns --in dist/iso.png --out dist/iso.icns",
+    "ico": "npm run zero-ico && npm run lens-ico && npm run lab-ico && npm run iso-ico",
+    "zero-ico": "to-ico dist/zero.png > dist/zero.ico",
+    "lens-ico": "to-ico dist/lens.png > dist/lens.ico",
+    "lab-ico": "to-ico dist/lab.png > dist/lab.ico",
+    "iso-ico": "to-ico dist/iso.png > dist/iso.ico",
     "favicon": "sharp -i dist/compositor.png -o ./ resize 32 32 && mv compositor.png dist/favicon.png",
     "babel": "babel src -d dist",
-    "prepublish": "npm run babel && npm run png && npm run icns && npm run favicon"
+    "prepublish": "npm run babel && npm run png && npm run icns && npm run ico &&npm run favicon"
   },
   "author": "Brent Jackson",
   "license": "MIT",
@@ -36,6 +41,7 @@
   "dependencies": {
     "node-gyp": "^3.6.2",
     "palx": "^1.0.2",
-    "rebuild": "^0.1.2"
+    "rebuild": "^0.1.2",
+    "to-ico-cli": "^1.0.0"
   }
 }
