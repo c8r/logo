@@ -4,16 +4,15 @@
   "description": "Logo and app icons for Compositor",
   "main": "dist/index.js",
   "scripts": {
-    "dev:iso": "repng src/Iso.js --dev -c src/style.css -p 9000",
-    "dev:zero": "repng src/Zero.js --dev -c src/style.css -p 9001",
-    "dev:lab": "repng src/Lab.js --dev -c src/style.css -p 9002",
     "png": "npm run logo-png && npm run zero-png && npm run lens-png && npm run grid-png && npm run lab-png && npm run iso-png",
-    "logo-png": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
-    "zero-png": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024 -c src/style.css",
-    "lens-png": "repng src/Lens.js -o dist -f lens -w 1024 -h 1024 -c src/style.css",
-    "lab-png": "repng src/Lab.js -o dist -f lab -w 1024 -h 1024 -c src/style.css",
-    "iso-png": "repng src/Iso.js -o dist -f iso -w 1024 -h 1024 -c src/style.css",
-    "grid-png": "repng src/Grid.js -o dist -f logo-grid -w 1024 -h 1024",
+
+    "logo-png": "repng src/Logo.js -d dist -f compositor.png -w 1024 -h 1024",
+    "zero-png": "repng src/Zero.js -d dist -f zero.png -w 1024 -h 1024 --css src/style.css",
+    "lens-png": "repng src/Lens.js -d dist -f lens.png -w 1024 -h 1024 --css src/style.css",
+    "lab-png": "repng src/Lab.js -d dist -f lab.png -w 1024 -h 1024 --css src/style.css",
+    "iso-png": "repng src/Iso.js -d dist -f iso.png -w 1024 -h 1024 --css src/style.css",
+    "grid-png": "repng src/Grid.js -d dist -f logo-grid.png -w 1024 -h 1024 --css src/style.css",
+
     "icns": "npm run zero-icns && npm run lens-icns && npm run lab-icns && npm run iso-icns",
     "zero-icns": "nicns --in dist/zero.png --out dist/zero.icns",
     "lens-icns": "nicns --in dist/lens.png --out dist/lens.icns",
@@ -30,7 +29,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "node-icns": "0.0.4",
-    "repng": "^2.0.0-alpha.1",
+    "repng": "^3.0.0",
     "sharp-cli": "^1.3.0"
   },
   "dependencies": {
