@@ -4,9 +4,7 @@
   "description": "Logo and app icons for Compositor",
   "main": "dist/index.js",
   "scripts": {
-    "dev:iso": "repng src/Iso.js --dev -c src/style.css -p 9000",
-    "dev:zero": "repng src/Zero.js --dev -c src/style.css -p 9001",
-    "dev:lab": "repng src/Lab.js --dev -c src/style.css -p 9002",
+    "start": "kit src",
     "png": "npm run logo-png && npm run zero-png && npm run lens-png && npm run grid-png && npm run lab-png && npm run iso-png",
     "logo-png": "repng src/Logo.js -o dist -f compositor -w 1024 -h 1024",
     "zero-png": "repng src/Zero.js -o dist -f zero -w 1024 -h 1024 -c src/style.css",
@@ -26,16 +24,12 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "devDependencies": {
+    "@compositor/kit-dev": "^1.0.11",
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "node-icns": "0.0.4",
-    "repng": "^2.0.0-alpha.1",
+    "repng": "^3.0.0",
     "sharp-cli": "^1.3.0"
-  },
-  "dependencies": {
-    "node-gyp": "^3.6.2",
-    "palx": "^1.0.2",
-    "rebuild": "^0.1.2"
   }
 }
