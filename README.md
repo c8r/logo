@@ -26,8 +26,8 @@ Other colors can be introduced when needed.
 
 ## Product Icons
 
+<img src='dist/iso.png' width='128' height='128' />
 <img src='dist/zero.png' width='128' height='128' />
-<img src='dist/lens.png' width='128' height='128' />
 <img src='dist/lab.png' width='128' height='128' />
 
 Product icons can be based on the logo's dimensions in a horizontal format.
