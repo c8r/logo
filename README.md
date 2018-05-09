@@ -26,8 +26,8 @@ Other colors can be introduced when needed.
 
 ## Product Icons
 
+<img src='dist/iso.png' width='128' height='128' />
 <img src='dist/zero.png' width='128' height='128' />
-<img src='dist/lens.png' width='128' height='128' />
 <img src='dist/lab.png' width='128' height='128' />
 
 Product icons can be based on the logo's dimensions in a horizontal format.
@@ -39,7 +39,7 @@ but can also branch out into product-specific brand colors to help differentiate
 The logo and app icons are SVGs, designed and built in React.
 Repng can be used to export the icons into PNG format.
 React DOM can be used to render SVGs.
-Because the logo is built with React, the product icons can literally be composed with the Logo component.
+Because the logo is built with React, the product icons can be composed with the Logo component.
 
 ```js
 <Logo
