@@ -19,8 +19,7 @@ const getPoints = length => Array.from({ length })
 const points = getPoints(6)
 
 const [ a, b, c, d, e, f ] = points
-/*
- *    a
+/*    a
  *  f   b
  *  e   c
  *    d
@@ -53,7 +52,6 @@ module.exports = ({
     stroke='currentcolor'
     strokeLinejoin='round'
   >
-    {false && <rect x='-12' y='-12' width='24' height='24' fill='tomato' />}
     <path d={D} />
   </svg>
 )
