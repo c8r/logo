@@ -61,6 +61,6 @@ Because the logo is built with React, the product icons can be composed with the
 
 ```sh
 npm i
-npm run dev
+npm start
 ```
 
