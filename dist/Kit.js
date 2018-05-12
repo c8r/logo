@@ -40,8 +40,7 @@ var _points = _slicedToArray(points, 6),
     d = _points[3],
     e = _points[4],
     f = _points[5];
-/*
- *    a
+/*    a
  *  f   b
  *  e   c
  *    d
@@ -66,7 +65,6 @@ module.exports = function (_ref) {
       stroke: 'currentcolor',
       strokeLinejoin: 'round'
     },
-    false && React.createElement('rect', { x: '-12', y: '-12', width: '24', height: '24', fill: 'tomato' }),
     React.createElement('path', { d: D })
   );
 };
